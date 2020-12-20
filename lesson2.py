@@ -1,13 +1,26 @@
 if __name__ == '__main__':
-#lesson 2
-#task 1
+    #lesson 3
+    #task 1 String manipulation
 
+    s = 'dictionary'
+    if len(s) >= 2:
+        print(s[0: 2] + s[-2:])
+    else:
+        print("Error. Please write more then 3 letters")
 
-<name> = "Igor"
-<day> = "19December"
-print(“Good day <name>! <day> is a perfect day to learn some python.”)
+        # lesson 3
+        # task 2 the valid phone number program.
+    phone = "0959999999"
+    if phone.isdigit() and len(phone) == 10:
+            print("красивый номер1111")
+    else:
+            print("введены некорректные данные")
 
-
-
-
+    #lesson 3
+        #task 3 The name check.
+    name1 = input('Введите имя:').lower()
+    if name1 == "игорь":
+            print("Спасибо,"+name1.title())
+    else:
+        print("выбери другое имя")
 
