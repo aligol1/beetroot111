@@ -75,5 +75,5 @@ second_name = "Alergush"
 print(f"Hello {first_name} {second_name} is a perfect day to learn some python.")
 
 
-
-
+abb = 55
+print(len(abb))
