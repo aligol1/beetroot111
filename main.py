@@ -40,26 +40,28 @@ if __name__ == '__main__':
 
     name = "Igor"
     day = "19 December"
-    print('Good day {0}!\n {1} is a perfect day to learn some python'.format(name, day))
+    print(f"Good day {name}!\n {day} is a perfect day to learn some python")
 
     # task 3 calculator
-
+    print()
+    print()
+    print("калькулятор")
     a = 45
     b = 23
     c = 2
-    print("addition")
+    print('addition')
     print(a + b + c)
-    print("subtraction")
+    print('subtraction')
     print(a - b - c)
-    print("division")
+    print('division')
     print(a / b / c)
-    print("multiplication")
+    print('multiplication')
     print(a * b * c)
-    print("exponentiation")
+    print('exponentiation')
     print(a ** b ** c)
-    print("modulus")
+    print('modulus')
     print(a % b)
-    print("Floor division")
+    print('Floor division')
     print(a // b)
 
 print()
@@ -70,7 +72,7 @@ print()
 # task 2 Greeting
 first_name = "Igor"
 second_name = "Alergush"
-print("Hello {0} {1}".format(first_name, second_name))
+print(f"Hello {first_name} {second_name} is a perfect day to learn some python.")
 
 
 
