@@ -20,7 +20,7 @@ if __name__ == '__main__':
 
 
     # task 2
-    a = ("#\t\t#")
+    a = "#\t\t#"
     b = ("#"*9)
     print(b)
     print(a)
@@ -70,7 +70,7 @@ print()
 # task 2 Greeting
 first_name = "Igor"
 second_name = "Alergush"
-print("Hello" + first_name +  second_name )
+print("Hello {0} {1}".format(first_name, second_name))
 
 
 
