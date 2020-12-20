@@ -1,7 +1,3 @@
-def plndrm(args):
-        pass
-
-
 if __name__ == '__main__':
         #lesson 3
         #task c зирочкой 3
