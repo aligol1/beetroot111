@@ -74,5 +74,6 @@ first_name = "Igor"
 second_name = "Alergush"
 print(f"Hello {first_name} {second_name} is a perfect day to learn some python.")
 
+#задания со звездочкой
 
-
+    print("{:05},{},{:b},{}".format(12, "Василий", 54, 32.1))

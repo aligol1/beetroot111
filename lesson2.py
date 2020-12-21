@@ -23,3 +23,4 @@ if __name__ == '__main__':
             print("Спасибо,"+name1.title())
     else:
         print("выбери другое имя")
+
