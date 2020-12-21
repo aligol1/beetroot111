@@ -76,4 +76,10 @@ print(f"Hello {first_name} {second_name} is a perfect day to learn some python."
 
 #задания со звездочкой
 
-    print("{:05},{},{:b},{}".format(12, "Василий", 54, 32.1))
+print("{:05},{},{:b},{}".format(12, "Василий", 54, 32.1))
+
+#задания со звездочкой
+
+s1 = "Корован"
+print(s1[-3:-7:-1]+s1[-1:-3:-1])
+
