@@ -46,24 +46,24 @@ if __name__ == '__main__':
     if a1 == '+' and a2 == '+':
         result = a + b + c
     elif a1 == '+' and a2 == '-':
-        result = a + b + c
+        result = a + b - c
     elif a1 == '+' and a2 == '*':
-        result = a + b + c
+        result = a + b * c
     elif a1 == '-' and a2 == '+':
-        result = a + b + c
+        result = a - b + c
     elif a1 == '-' and a2 == '-':
-        result = a + b + c
+        result = a - b - c
     elif a1 == '-' and a2 == '*':
-        result = a + b + c
+        result = a - b * c
     elif a1 == '*' and a2 == '+':
-        result = a + b + c
+        result = a * b + c
     elif a1 == '*' and a2 == '-':
-        result = a + b + c
+        result * a + b - c
     elif a1 == '*' and a2 == '*':
-        result = a + b + c
+        result = a * b * c
     answer1 = int(input(f'Решите задачу: {a} {a1} {b} {a2} {c}:'))
     if answer1 == result:
         print("Good job")
     else:
-        print("Try again later")
+        print("correct number is",result, " .Try again later")
 
