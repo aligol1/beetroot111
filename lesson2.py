@@ -12,7 +12,7 @@ if __name__ == '__main__':
         # task 2 the valid phone number program.
     phone = "0959999999"
     if phone.isdigit() and len(phone) == 10:
-            print("красивый номер1111")
+            print("красивый номер")
     else:
             print("введены некорректные данные")
 
