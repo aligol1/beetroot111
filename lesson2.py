@@ -1,26 +1,51 @@
+def subtraction(args):
+    pass
+
+
 if __name__ == '__main__':
-    #lesson 3
-    #task 1 String manipulation
 
-    s = 'dictionary'
-    if len(s) >= 2:
-        print(s[0: 2] + s[-2:])
-    else:
-        print("Error. Please write more then 3 letters")
+    # LESSON 2
+    # task 1 GREETING PROGRAM
 
-        # lesson 3
-        # task 2 the valid phone number program.
-    phone = "0959999999"
-    if phone.isdigit() and len(phone) == 10:
-            print("красивый номер")
-    else:
-            print("введены некорректные данные")
+    name = "Igor"
+    day = "19 December"
+    print(f"Good day {name}!\n {day} is a perfect day to learn some python")
 
-    #lesson 3
-        #task 3 The name check.
-    name1 = input('Введите имя:').lower()
-    if name1 == "игорь":
-            print("Спасибо,"+name1.title())
-    else:
-        print("выбери другое имя")
+    # task 3 calculator
+    print()
+    print()
+    print("калькулятор")
+    a = 45
+    b = 23
+    c = 2
+    print('addition')
+    print(a + b + c)
+    print('subtraction')
+    print(a - b - c)
+    print('division')
+    print(a / b / c)
+    print('multiplication')
+    print(a * b * c)
+    print('exponentiation')
+    print(a ** b ** c)
+    print('modulus')
+    print(a % b)
+    print('Floor division')
+    print(a // b)
+
+    print()
+
+    #task 2 Greeting
+    first_name = "Igor"
+    second_name = "Alergush"
+    print(f"Hello {first_name} {second_name} is a perfect day to learn some python.")
+
+    #задания со звездочкой
+
+    print("{:05},{},{:b},{}".format(12, "Василий", 54, 32.1))
+
+    #задания со звездочкой
+
+    s1 = "Корован"
+    print(s1[-3:-7:-1]+s1[-1:-3:-1])
 
