@@ -36,6 +36,15 @@ if __name__ == '__main__':
     # that combine characters ‘h’, ‘e’, ‘l’, ‘l’, ‘o’ -> ‘hlelo’, ‘olelh’, ‘loleh’ …
     # Tips: Use random module to get random char from string)
 
+    import random
+    user_word = str.lower(input("введите слово: "))
+    if not user_word.isalpha():
+        print("Слово должно состоять из букв")
+    else:
+        randomized_letters = random.sample(user_word, len(user_word))
+        print(''.join(randomized_letters)) #Так и не смог сделать пять разных вариаций. Только один рандом получился.
+
+
     #Lesson 4 Task 4 The math quiz program
     #Write a program that asks the answer for a mathematical expression, checks
     # whether the user is right or wrong, and then responds with a message accordingly.
@@ -58,12 +67,12 @@ if __name__ == '__main__':
     elif a1 == '*' and a2 == '+':
         result = a * b + c
     elif a1 == '*' and a2 == '-':
-        result * a + b - c
+        result = a + b - c
     elif a1 == '*' and a2 == '*':
         result = a * b * c
     answer1 = int(input(f'Решите задачу: {a} {a1} {b} {a2} {c}:'))
     if answer1 == result:
         print("Good job")
     else:
-        print("correct number is",result, " .Try again later")
+        print("correct number is", result, " .Try again later")
 
