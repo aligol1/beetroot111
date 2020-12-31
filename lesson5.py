@@ -14,6 +14,7 @@ if __name__ == '__main__':
     maxchislo = max(a, b, c, d, e)
     print(maxchislo)
 
+
 '''Lesson 5 Task 2 
 Exclusive common numbers.
 Generate 2 lists with the length of 10 with random integers from 1 to 10,
