@@ -46,3 +46,4 @@ def devide(a, b):
 a = input('print divid. to squere')
 b = input('enter divider')
 devide(a, b)
+
