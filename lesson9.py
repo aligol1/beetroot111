@@ -32,11 +32,10 @@ The first argument to the application should be the name of the phonebook.
 Application should load JSON data, if it is present in the folder with application, else raise an error. 
 After the user exits, all data should be saved to loaded JSON.
 '''
-
 import json
 
 def read_file(file_name):
-    with open(file_name) as file_object:
+    with open(file_name, 'w') as file_object:
             load_file = json.load(file_object)
             return load_file
 
