@@ -101,15 +101,16 @@ class TVComtroller:
     def previous_channel(self):
         if self.position != 0:
             self.choose_channel -= 1
-        else:self.position = len(self.choose_channel) -1
+        else:
+            self.position = len(self.choose_channel) -1
         return self.current_channel()
 
     def is_exist(self, search_channel):
         if search_channel in range(1, len(self.choose_channel)+1) or search_channel in self.choose_channel:
-            answer: 'yes'
+            answer = 'yes'
         else:
-            answer: 'no'
-            return answer
+            answer = 'no'
+        return answer
 
 if __name__ == "__main__":
     controller = TVComtroller(channels)
@@ -118,6 +119,6 @@ if __name__ == "__main__":
     print(controller.turn_channel(4))
     print(controller.next_channel())
     print(controller.current_channel())
-    print(controller.is_exist(4)) ####### НЕ ПОНИМАЮ ПОЧЕМУ НЕ РАБОТАЕТ
-    print(controller.is_exist('MTV')) ####### НЕ ПОНИМАЮ ПОЧЕМУ НЕ РАБОТАЕТ
+    print(controller.is_exist(4))
+    print(controller.is_exist('ыва'))
 

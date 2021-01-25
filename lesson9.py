@@ -35,12 +35,16 @@ After the user exits, all data should be saved to loaded JSON.
 import json
 
 def read_file(file_name):
-    with open(file_name, 'w') as file_object:
+    with open(file_name, 'r') as file_object:
+        try:
             load_file = json.load(file_object)
-            return load_file
+        except json.decoder.JSONDecodeError:
+            load_file = []
+        return load_file
+
 
 def rewrite_file(file_name, new_content):
-    with open(file_name) as file_object:
+    with open(file_name, 'w') as file_object:
         json.dump(new_content, file_object)
 
 def print_contact(contact):
@@ -60,7 +64,7 @@ def print_file(file_name):
 def input_contact():
     new_contact = {
         'name': input('Имя ').lower(),
-        'last_name': input('Фамилия ').lower,
+        'last_name': input('Фамилия ').lower(),
         'phone': input('Телефон ').lower(),
         'country': input('Страна ').lower(),
         'city': input('Город ').lower()
