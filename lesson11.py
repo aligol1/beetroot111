@@ -1,4 +1,4 @@
-"""
+
 '''LEsson 11 Task 1 School
 Make a class structure in python representing people at school.
 Make a base class called Person, a class called Student,
@@ -75,8 +75,8 @@ m = Mathematician()
 assert m.square_nums([7, 11, 5, 4]) == [49, 121, 25, 16]
 assert m.remove_positives([26, -11, -8, 13, -90]) == [-11, -8, -90]
 assert m.filter_leaps([2001, 1884, 1995, 2003, 2020]) == [1884, 2020]
-```
 '''
+
 
 class Mathematician:
     def __init__(self, list_of_integers):
@@ -99,7 +99,7 @@ if __name__ == "__main__":
     print(m1.square_nums())
     print(m2.remove_positives())
     print(m3.filter_leaps())
-"""
+
 
 '''Lesson 11 Task 3 Product Store
 Write a class Product that has three attributes:
@@ -173,6 +173,9 @@ class ProductStore:
         for i in self.stock:
             if i[2] == product_name:
                 print('')
+
+    def print_data(self):
+        return self.
 
 
 
