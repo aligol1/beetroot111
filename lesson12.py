@@ -8,29 +8,30 @@ Also, create a simple generic function, which takes as input instance of a Cat o
 """
 
 
-
 class Animal:
     def talk(self):
         pass
+
 
 class Dog(Animal):
     def talk(self):
         return 'Woof woof'
 
+
 class Cat(Animal):
     def talk(self):
         return 'meow'
 
+
 def animal_talk(animal):
     print(animal.talk())
+
 
 if __name__ == '__main__':
     cat = Cat()
     dog = Dog()
     animal_talk(cat)
     animal_talk(dog)
-
-
 
 """Task 2
 
@@ -72,8 +73,9 @@ class Author:
 ```
 """
 
+
 class Author:
-    def __init__(self,name,country,birthday):
+    def __init__(self, name, country, birthday):
         self.name = name
         self.country = country
         self.birthday = birthday
@@ -85,14 +87,15 @@ class Author:
     def __repr__(self):
         return f'{self.name}'
 
-class Book:
-    book_count =1
 
-    def __init__(self,name,year,author: Author):
+class Book:
+    book_count = 1
+
+    def __init__(self, name, year, author: Author):
         self.name = name
         self.year = year
         self.author = author
-        Book.book_count +=1
+        Book.book_count += 1
 
     def __str__(self):
         return f'Name: {self.name}\n Year: {self.year}\nAuthor: {self.author}'
@@ -102,7 +105,7 @@ class Book:
 
 
 class Library:
-    def __init__(self,name):
+    def __init__(self, name):
         self.name = name
         self.books = []
         self.authors = []
@@ -113,8 +116,8 @@ class Library:
     def __repr__(self):
         return f'{self.name}'
 
-    def new_book(self,name: str, year:int, author: Author):
-        book = Book(name,year,author)
+    def new_book(self, name: str, year: int, author: Author):
+        book = Book(name, year, author)
         if book not in self.books:
             self.books.append(book)
         if book not in author.books:
@@ -123,12 +126,13 @@ class Library:
             self.authors.append(author)
         return book
 
-    def group_by_author(self,author: Author):
+    def group_by_author(self, author: Author):
         if author in self.authors:
             return author.books
 
-    def group_by_year(self,year: int):
+    def group_by_year(self, year: int):
         return [book for book in self.books if book.year == year]
+
 
 if __name__ == '__main__':
     p1 = Author('Petro', 'Ukraine', '01012010')
@@ -143,8 +147,6 @@ if __name__ == '__main__':
     print(my_library)
     print(my_library.group_by_author(p1))
     print(my_library.group_by_year(1968))
-
-
 
 """
 Task 3
@@ -166,3 +168,56 @@ y = Fraction(1/4)
 x + y == Fraction(3/4)
 
 """
+
+
+def hhh(numenator, dominator):
+    while dominator:
+        numenator, dominator = dominator, numenator % dominator
+    return numenator
+
+class Fraction:
+    def __init__(self, numenator: int, dominator: int):
+        if not isinstance(numenator, int) and not isinstance(dominator, int):
+            raise TypeError("write int")
+        if dominator == 0:
+            raise ZeroDivisionError("the dominator cant be zero")
+        self.top = numenator
+        self.bottom = dominator
+
+    def __str__(self):
+        if self.bottom == 1:
+            return self.top
+        elif self.top >= self.bottom:
+            return f'{self.top} // {self.bottom} {self.top % self.bottom} / {self.bottom}'
+        else:
+            return f'{self.top}/{self.bottom}'
+
+    def __add__(self, other):
+        newtop = self.top * other.bottom + other.top * self.bottom
+        newbottom = self.bottom * other.bottom
+        common = hhh(newtop, newbottom)
+        return f'{newtop // common}/{newbottom // common}' if abs(newtop // common) != abs(
+            newbottom // common) else (newtop // common) // (newbottom // common)
+
+    def __sub__(self, other):
+        newtop = self.top * other.bottom - other.top * self.bottom
+        newbottom = self.bottom * other.bottom
+        common = hhh(newtop, newbottom)
+        return f'{newtop // common}/{newbottom // common}' if abs(newtop // common) != abs(
+            newbottom // common) else (newtop // common) // (newbottom // common)
+
+    def __mul__(self, other):
+        return f'{self.top * other.top}/{self.bottom * other.bottom}'
+
+    def __truediv__(self, other):
+        return f'{self.top * other.top}/{self.bottom * other.bottom}'
+
+if __name__ == '__main__':
+
+    x = Fraction(2,3)
+    y = Fraction(1,2)
+    print(y)
+    print('sum', x + y)
+    print('mult', x - y)
+    print('sub', x * y)
+    print('div', x / y)
