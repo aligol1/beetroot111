@@ -17,6 +17,7 @@ def make_sum_numbers_to_power(power):
         return sum(num**power for num in args)
     return sum_numbers
 
+
 if __name__ == '__main__':
     pw = make_sum_numbers_to_power(3)
     print(pw(3, 4, 5, 6))
