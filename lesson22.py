@@ -40,8 +40,8 @@ def reverse(str):
 if __name__ == '__main__':
 
     mystr = "hello"
-    print("The Given String  is: ", mystr)
-    print("Reversed String is: ", reverse(mystr))
+    print("дали: ", mystr)
+    print("перевернули: ", reverse(mystr))
 
 #lesson 22 task 5
 def sum_of_digit(n):
@@ -50,7 +50,8 @@ def sum_of_digit(n):
     return (n % 10 + sum_of_digit(int(n / 10)))
 
 if __name__ == '__main__':
-    num = 28
+    num = 282
     result = sum_of_digit(num)
-    print("Sum of digits in", num, "is", result)
+    print("сумма цифр в ", num, "будет", result)
+
 
