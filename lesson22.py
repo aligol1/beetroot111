@@ -16,6 +16,19 @@ if __name__ == '__main__':
     print(is_palindrome('o'))
     print(is_palindrome('goglg'))
 
+#lesson 22 task 3
+def mult(a,n):
+    if n == 0:
+        return 0
+    else:
+        return a + mult(a, n - 1)
+
+
+if __name__ == '__main__':
+    a = 2
+    b = 4
+    print(mult(a,b))
+
 
 #lesson 22 task 4
 def reverse(str):
