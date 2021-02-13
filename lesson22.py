@@ -40,3 +40,4 @@ if __name__ == '__main__':
     num = 28
     result = sum_of_digit(num)
     print("Sum of digits in", num, "is", result)
+
