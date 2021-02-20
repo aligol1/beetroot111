@@ -49,7 +49,7 @@ class Stack:
 
             while (mydata != None):
                 print(mydata.data, "->", end=" ")
-                aaa = mydata.next
+                mydata = mydata.next
             return
 
 
