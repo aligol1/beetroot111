@@ -1,4 +1,3 @@
-
 """Lesson 26 Task1
 Task 1
 

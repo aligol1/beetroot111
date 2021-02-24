@@ -36,7 +36,6 @@ class Stack:
         else:
             popnode = self.head
             self.head = self.head.next
-            popnode.next = None
             return popnode.data
 
     def showme(self):
