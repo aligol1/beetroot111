@@ -8,6 +8,7 @@ and keep in mind which are common and which are not. For example,
 the name should be a Person attribute, while salary should only be available to the teacher. '''
 
 
+
 class Person:
     count_person = 0
     def __init__(self, name, lastname, gender, birthday):
